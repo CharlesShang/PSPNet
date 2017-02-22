@@ -18,7 +18,7 @@ if(HAVE_CUDA)
 endif()
 
 add_library(caffe ${srcs})
-target_link_libraries(caffe proto ${Caffe_LINKER_LIBS})
+target_link_libraries(caffe proto ${Caffe_LINKER_LIBS} ${MATIO_LIBRARIES})
 caffe_default_properties(caffe)
 set_target_properties(caffe PROPERTIES
     VERSION   ${CAFFE_TARGET_VERSION}
